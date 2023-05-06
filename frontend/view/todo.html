@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="../css/todo.css">
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <h1 style="color:black">Responsive Todo Application</h1>
+
+            <ul class="navmenu">
+                <li><a href="./viewtodo.html">View Todos</a></li>
+                <li><a href="./todo.html">Add Todos</a></li>
+
+                <li><a id="logout" href="../index.html">Logout</a></li>
+
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+        </div>
+    </nav>
+
+    <div id="addtodo">
+        <h1>Add Todo</h1>
+        <br>
+        <form action="">
+            <input type="text" id="name" placeholder="Enter TODO name" required> <br>
+            <select name="" id="priority" required>
+                <option value="Choose Priority">Choose Priority</option>
+                <option value="High">High</option>
+                <option value="Low">Low</option>
+            </select>
+            <br>
+
+            <input type="submit" value="Add">
+
+        </form>
+
+
+    </div>
+</body>
+
+</html>
+
+<script src="../js/todo.js"></script>

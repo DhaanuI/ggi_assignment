@@ -1,0 +1,265 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
+
+nav {
+    color: black;
+    padding: 30px;
+    background-color: aliceblue;
+    margin-bottom: 30px
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navmenu {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    font-size: medium;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+
+.bar {
+    display: block;
+    background-color: rgb(212, 17, 17);
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+input {
+    margin-bottom: 20px;
+    margin-top: 4px;
+    height: 40px;
+    width: 300px;
+    border-radius: 10px;
+    border-color: aliceblue;
+}
+
+input[type="submit"] {
+    background-color: rgb(71, 193, 241);
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+select {
+    height: 40px;
+    margin-bottom: 20px;
+    margin-top: 4px;
+    /* border-color: aliceblue; */
+    border-radius: 10px;
+    padding: 5px;
+    width: 310px;
+    text-align: center;
+}
+
+#formdiv {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+}
+
+form {
+    margin: auto;
+    text-align: center;
+}
+
+#reg,
+#log {
+    /* border:1px solid black; */
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 30px;
+}
+
+#formdiv h1 {
+    margin-bottom: 20px
+}
+
+#log:hover,
+#reg:hover {
+    background-color: aliceblue;
+}
+
+h1 {
+    color: #be5656;
+}
+
+
+@media screen and (max-width:1000px) {
+    #formdiv {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin: auto;
+    }
+
+    #reg {
+        margin-bottom: 30px
+    }
+
+    #reg>h1,
+    #log>h1 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .hamburger {
+        display: block
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg)
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg)
+    }
+
+    .navmenu {
+        position: fixed;
+        top: 90px;
+        left: -300%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        gap: 10px;
+        
+    }
+
+    .navmenu.active {
+        left: 40%
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    #formdiv {
+        margin-top:100px
+    }
+
+
+}
+
+@media screen and (max-width:625px) {
+
+    #reg,
+    #log {
+        /* border:1px solid black; */
+        width:80%
+    }
+
+    input,select{
+        width:80%
+    }
+}
+
+@media screen and (max-width:450px) {
+    .hamburger {
+        display: block
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg)
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg)
+    }
+
+    .navmenu {
+        position: fixed;
+        top: 105px;
+        left: -150%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navmenu.active {
+        left: 40%
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+
+
+}
+
+@media screen and (max-width:398px) {
+    .hamburger {
+        display: block
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg)
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg)
+    }
+
+    .navmenu {
+        position: fixed;
+        top: 75px;
+        left: -300%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navmenu.active {
+        left: 40%
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+}

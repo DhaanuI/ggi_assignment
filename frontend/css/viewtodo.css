@@ -1,0 +1,299 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
+
+nav {
+    color: black;
+    padding: 30px;
+    background-color: aliceblue;
+    margin-bottom: 30px
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navmenu {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    font-size: medium;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+h1 {
+    color: #be5656;
+    text-align: center;
+}
+
+#render {
+    /* border:1px solid black; */
+    width: 50%;
+    margin: auto;
+}
+
+table {
+    margin: auto;
+}
+
+th {
+    padding: 20px;
+    border: 1px solid black;
+    background-color: #dd7e7e;
+}
+
+td {
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    background-color: rgb(219, 27, 27);
+    color: white;
+    font-size: medium;
+
+}
+
+button:hover {
+    background-color: rgb(218, 181, 181);
+    color: black
+}
+
+
+
+.bar {
+    display: block;
+    background-color: rgb(228, 12, 12);
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+@media screen and (max-width:768px) {
+    .hamburger {
+        display: block
+    }
+
+    table {
+        margin: auto;
+    }
+
+    th {
+        padding: 10px;
+        border: 1px solid black;
+        background-color: #dd7e7e;
+    }
+
+    td {
+        padding: 10px;
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg)
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg)
+    }
+
+    .navmenu {
+        position: fixed;
+        top: 90px;
+        left: -300%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        gap: 10px;
+
+    }
+
+    .navmenu.active {
+        left: 40%
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    #formdiv {
+        margin-top: 100px
+    }
+
+
+    #render {
+
+        margin-top: 100px;
+    }
+
+
+}
+
+
+@media screen and (max-width:550px) {
+
+    table {
+        margin: auto;
+    }
+
+    th {
+        padding: 3px;
+        border: 1px solid black;
+        background-color: #dd7e7e;
+    }
+
+    td {
+        padding: 3px;
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    button {
+        padding: 1px;
+        background-color: rgb(219, 27, 27);
+        color: white;
+        font-size: medium;
+
+    }
+
+}
+
+
+@media screen and (max-width:450px) {
+    .hamburger {
+        display: block
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg)
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg)
+    }
+
+    .navmenu {
+        position: fixed;
+        top: 105px;
+        left: -150%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navmenu.active {
+        left: 40%
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+
+
+}
+
+@media screen and (max-width:398px) {
+    .hamburger {
+        display: block
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg)
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg)
+    }
+
+    .navmenu {
+        position: fixed;
+        top: 100px;
+        left: -300%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navmenu.active {
+        left: 40%
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    table {
+        width: 90%
+    }
+
+    th {
+
+        border: 1px solid black;
+        background-color: #dd7e7e;
+    }
+
+    td {
+
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    button {
+
+        background-color: rgb(219, 27, 27);
+        color: white;
+        font-size: medium;
+
+    }
+
+
+    #render {
+        /* border: 1px solid black; */
+        text-align: center;
+        margin-top: 100px;
+        width: auto;
+    }
+
+}

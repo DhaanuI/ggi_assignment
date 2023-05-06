@@ -1,0 +1,242 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
+
+nav {
+    color: black;
+    padding: 30px;
+    background-color: aliceblue;
+    margin-bottom: 30px
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navmenu {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    font-size: medium;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+#addtodo {
+    /* border:1px solid black; */
+    width:40%;
+    margin:auto;
+    border-radius:10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        padding: 30px;
+}
+
+input {
+    margin-bottom: 20px;
+    margin-top: 4px;
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+    border-color: aliceblue;
+}
+
+input[type="submit"] {
+    background-color: rgb(71, 193, 241);
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form{
+    margin:auto;
+    text-align: center;
+}
+
+select {
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    width: 210px;
+    text-align: center;
+}
+
+h1{
+    color: #be5656;
+    text-align: center;
+}
+
+
+
+.bar {
+    display: block;
+    background-color: rgb(228, 12, 12);
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+@media screen and (max-width:768px) {
+    .hamburger {
+        display: block
+    }
+    #addtodo{
+        margin-top:120px
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg)
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg)
+    }
+
+    .navmenu {
+        position: fixed;
+        top: 90px;
+        left: -300%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        gap: 10px;
+        
+    }
+
+    .navmenu.active {
+        left: 40%
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    #formdiv {
+        margin-top:100px
+    }
+
+
+}
+
+@media screen and (max-width:625px) {
+    input,select{
+        width:80%
+    }
+
+    #addtodo{
+        margin-top:120px
+    }
+}
+
+@media screen and (max-width:450px) {
+    .hamburger {
+        display: block
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg)
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg)
+    }
+
+    .navmenu {
+        position: fixed;
+        top: 105px;
+        left: -150%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navmenu.active {
+        left: 40%
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+    input,select{
+        width:80%
+    }
+    #addtodo{
+        margin-top:120px
+    }
+
+}
+
+@media screen and (max-width:398px) {
+    .hamburger {
+        display: block
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg)
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg)
+    }
+
+    .navmenu {
+        position: fixed;
+        top: 105px;
+        left: -300%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navmenu.active {
+        left: 40%
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+    input,select{
+        width:80%
+    }
+
+    #addtodo{
+        margin-top:100px
+    }
+}
