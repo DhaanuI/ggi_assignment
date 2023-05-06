@@ -1,4 +1,5 @@
-let url = "http://localhost:4500"
+
+let url = "https://dull-pink-camel-robe.cyclic.app/"
 
 
 let hamburger = document.querySelector(".hamburger")
@@ -37,7 +38,7 @@ regform.addEventListener("submit", async (event) => {
 
 
 
-    let posting = await fetch("http://localhost:4500/users/register", {
+    let posting = await fetch(`${url}users/register`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -47,7 +48,6 @@ regform.addEventListener("submit", async (event) => {
 
     let res = await posting.json()
 
-    console.log(res)
     alert(res.message)
 
     regform.reset()
@@ -68,7 +68,7 @@ loginform.addEventListener("submit", async (event) => {
         password: inputpassword,
     }
 
-    let verifyingLogin = await fetch("http://localhost:4500/users/login", {
+    let verifyingLogin = await fetch(`${url}users/login`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -81,10 +81,10 @@ loginform.addEventListener("submit", async (event) => {
     alert(res.message ? res.message : res.error)
     if (res.token) {
         let token = res.token;
-        sessionStorage.setItem("token",token)
+        sessionStorage.setItem("token", token)
         loginform.reset()
 
-        window.location.href="./view/todo.html"
+        window.location.href = "./view/todo.html"
     }
 
 

@@ -8,6 +8,8 @@ hamburger.addEventListener("click", () => {
 })
 
 
+let url="https://dull-pink-camel-robe.cyclic.app/"
+
 let form = document.querySelector("form")
 if (sessionStorage.getItem("token")) {
     form.addEventListener("submit", async (event) => {
@@ -21,7 +23,7 @@ if (sessionStorage.getItem("token")) {
             priority: inputpriority
         }
 
-        let posting = await fetch("http://localhost:4500/todos/add", {
+        let posting = await fetch(`${url}todos/add`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -32,7 +34,6 @@ if (sessionStorage.getItem("token")) {
 
         let res = await posting.json()
 
-        console.log(res)
         alert(res.message)
 
         form.reset()

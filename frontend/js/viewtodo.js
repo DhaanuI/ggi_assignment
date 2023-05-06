@@ -7,19 +7,19 @@ hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("active")
 })
 
+let url = "https://dull-pink-camel-robe.cyclic.app/"
 
 let arrayofdata = []
-if(sessionStorage.getItem("token"))
-{
+if (sessionStorage.getItem("token")) {
     fun()
 }
-else{
+else {
     alert("Please login")
 }
 
 
 async function fun() {
-    let data = await fetch("http://localhost:4500/todos/", {
+    let data = await fetch(`${url}todos/`, {
         method: "GET",
         headers: {
             Authorization: sessionStorage.getItem("token")
@@ -28,8 +28,6 @@ async function fun() {
 
     let arr = await data.json()
     arrayofdata = arr.Todos
-
-    //console.log(arrayofdata.Todos)
 
     renderthis(arrayofdata)
 }
@@ -62,7 +60,7 @@ function renderthis(data) {
         td4.append(button);
 
         button.addEventListener('click', async () => {
-            await fetch(`http://localhost:4500/todos/${item._id}`, {
+            await fetch(`${url}todos/${item._id}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: sessionStorage.getItem("token")
